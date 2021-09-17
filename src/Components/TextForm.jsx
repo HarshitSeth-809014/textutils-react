@@ -1,3 +1,4 @@
+/* eslint-disable no-empty-character-class */
 import React, { useState } from 'react'
 
 const TextForm = ({ heading }) => {
@@ -14,6 +15,9 @@ const TextForm = ({ heading }) => {
                 <div className="btn-group" role="group" aria-label="Basic outlined example">
                     <button type="button" className="btn btn-outline-primary" onClick={() => setText(text.toUpperCase())}>Convert to Uppercase</button>
                     <button type="button" className="btn btn-outline-primary" onClick={() => setText(text.toLowerCase())}>Convert to Lowercase</button>
+                    <button type="button" className="btn btn-outline-primary" onClick={() => setText('')}>Clear Text</button>
+                    <button type="button" className="btn btn-outline-primary" onClick={() => setText(text.trim())}>Trim Whitespaces</button>
+                    <button type="button" className="btn btn-outline-primary" onClick={() => navigator.clipboard.writeText(document.getElementById('myBox').value)}>Copy Text</button> 
                 </div>
             </div>
 
