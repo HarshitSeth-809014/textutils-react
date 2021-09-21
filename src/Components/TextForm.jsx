@@ -36,6 +36,7 @@ const TextForm = ({ heading, showAlert }) => {
                         navigator.clipboard.writeText(document.getElementById('myBox').value)
                         showAlert("Text copied successfully!", "success")
                     }}>Copy Text</button>
+
                 </div>
             </div>
 
